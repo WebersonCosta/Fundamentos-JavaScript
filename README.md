@@ -1,0 +1,2 @@
+# Fundamentos-JavaScript
+Minhas anotações
