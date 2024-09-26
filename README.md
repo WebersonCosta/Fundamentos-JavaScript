@@ -1,6 +1,21 @@
 # Fundamentos-JavaScript
 Minhas anotações
 
+## Template String
+
+Template strings são definidas usando crases **(`)** em vez de aspas simples **(')** ou duplas **(")**.
+
+### Interpolação de Variáveis
+
+```javacript
+  const nome = "João";
+  const idade = 25;
+  const mensagem = `Meu nome é ${nome} e eu tenho ${idade} anos.`;
+  console.log(mensagem); // "Meu nome é João e eu tenho 25 anos."
+```
+
+---
+
 ## Math
 
 O objeto Math em JavaScript é uma coleção de propriedades e métodos matemáticos que você pode usar para realizar cálculos. Aqui estão alguns dos principais recursos do objeto Math e como usá-los:
@@ -53,8 +68,14 @@ O objeto Math em JavaScript é uma coleção de propriedades e métodos matemát
 ```javascript
   console.log(Math.sin(Math.PI / 2)); // 1
   console.log(Math.cos(Math.PI));    // -1
-``` 
+```
 
+---
+
+# Fundamentos da Linguagem Markdown
+
+# Título 1
+## Título 2
 ### Título 3
 
 **Texto em negrito**
@@ -99,6 +120,6 @@ Este é um parágrafo com **negrito** e *itálico*.
 
 ```python
 print("Hello, Markdown!")
+```
 
-
-Esses são os fundamentos do Markdown! Pratique criando seus próprios documentos. Se precisar de mais detalhes ou ajuda, é só avisar!
+Esses são os fundamentos do Markdown!
