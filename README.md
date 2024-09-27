@@ -72,7 +72,7 @@ O objeto Math em JavaScript é uma coleção de propriedades e métodos matemát
 
 ---
 
-### JSON
+## JSON
 
 
 JSON é um formato baseado em pares de chave-valor. Por exemplo:
@@ -85,7 +85,9 @@ JSON é um formato baseado em pares de chave-valor. Por exemplo:
 }
 ```
 
-### Promise
+---
+
+## Promise
 
 
 Uma promessa é um objeto que representa a eventual conclusão ou falha de uma operação assíncrona e seu valor resultante. Ela pode estar em um dos seguintes estados:
