@@ -17,6 +17,37 @@ Template strings são definidas usando crases **(`)** em vez de aspas simples **
 
 ---
 
+## Operador Ternário
+
+O operador ternário em JavaScript é uma forma concisa de fazer uma verificação condicional. Ele funciona como um atalho para a estrutura if...else
+
+#### Sintaxe
+
+```javascript
+  condição ? valorSeVerdadeiro : valorSeFalso;
+
+```
+
+- **Condição:** Uma expressão que será avaliada como verdadeira ou falsa.
+- **Valor se verdadeiro:** O valor que será retornado se a condição for verdadeira.
+- **Valor se falso:** O valor que será retornado se a condição for falsa.
+
+```javascript
+  let idade = 18;
+  let podeDirigir = (idade >= 18) ? "Sim" : "Não";
+  
+  console.log(podeDirigir); // Saída: "Sim"
+
+```
+
+#### Explicação
+
+- **Condição:** idade >= 18
+- Se a condição for verdadeira, **podeDirigir** será **"Sim"**.
+- Se for falsa, **podeDirigir** será **"Não"**.
+
+---
+
 ## Math
 
 O objeto Math em JavaScript é uma coleção de propriedades e métodos matemáticos que você pode usar para realizar cálculos. Aqui estão alguns dos principais recursos do objeto Math e como usá-los:
