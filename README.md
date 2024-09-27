@@ -71,3 +71,25 @@ O objeto Math em JavaScript é uma coleção de propriedades e métodos matemát
 ```
 
 ---
+
+### JSON
+
+
+JSON é um formato baseado em pares de chave-valor. Por exemplo:
+
+```javascript
+{
+  "nome": "João",
+  "idade": 30,
+  "email": "joao@example.com"
+}
+```
+
+### Promise
+
+
+Uma promessa é um objeto que representa a eventual conclusão ou falha de uma operação assíncrona e seu valor resultante. Ela pode estar em um dos seguintes estados:
+
+- **Pendente (Pending)**: Estado inicial, quando a operação ainda não foi concluída.
+- **Cumprida (Fulfilled)**: A operação foi concluída com sucesso.
+- **Rejeitada (Rejected)**: A operação falhou.
