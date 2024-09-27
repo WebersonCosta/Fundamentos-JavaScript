@@ -103,6 +103,28 @@ Uma promessa é um objeto que representa a eventual conclusão ou falha de uma o
 
 O **Object.assign** é um método que é usado para copiar as propriedades de um ou mais objetos para um objeto de destino. Ele é muito útil para a criação de novos objetos a partir de objetos existentes, facilitando a combinação de propriedades e a criação de cópias de objetos.
 
+#### Sintaxe
+
+```javascript
+
+Object.assign(destino, ...fontes);
+
+```
+
+- destino: O objeto que receberá as propriedades.
+- ...fontes: Um ou mais objetos cujas propriedades serão copiadas para o objeto de destino.
+
+#### Exemplo de uso
+
+```javascript
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+
+const resultado = Object.assign({}, obj1, obj2);
+console.log(resultado); // { a: 1, b: 3, c: 4 }
+
+```
+
 ---
 
 ## sessionStorage
