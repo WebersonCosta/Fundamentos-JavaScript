@@ -119,6 +119,109 @@ JSON é um formato baseado em pares de chave-valor. Por exemplo:
 
 ---
 
+## Função
+
+Uma função é um bloco de código projetado para executar uma tarefa específica. Você pode chamar uma função sempre que precisar executar essa tarefa.
+
+### Declaração de Funções
+
+1. **Função Declarada (Function Declaration)**
+
+```javascript
+
+function saudacao(nome) {
+    return `Olá, ${nome}!`;
+}
+
+console.log(saudacao("Maria")); // Saída: Olá, Maria!
+
+```
+
+2. **Função Anônima (Function Expression)**
+
+```javascript
+
+const somar = function(a, b) {
+    return a + b;
+};
+
+console.log(somar(5, 3)); // Saída: 8
+
+```
+
+3. **Arrow Function (Função de seta)**
+
+```javascript
+
+const multiplicar = (x, y) => x * y;
+
+console.log(multiplicar(4, 5)); // Saída: 20
+
+```
+
+### Parâmetros e Argumentos
+
+- **Parâmetros** são as variáveis que você define na declaração da função.
+- **Argumentos** são os valores que você passa para a função quando a chama.
+
+```javascript
+
+function exibirMensagem(mensagem) {
+    console.log(mensagem);
+}
+
+exibirMensagem("Aprendendo JavaScript!"); // Saída: Aprendendo JavaScript!
+
+```
+
+### Retorno de Funções
+
+Uma função pode retornar um valor usando a palavra-chave return. Quando uma função retorna um valor, você pode usá-lo na expressão que chamou a função.
+
+```javascript
+
+function calcularArea(base, altura) {
+    return (base * altura) / 2;
+}
+
+const area = calcularArea(5, 10);
+console.log(area); // Saída: 25
+
+```
+
+### Funções como Objetos
+
+Em JavaScript, funções são objetos de primeira classe, o que significa que podem ser atribuídas a variáveis, passadas como argumentos e retornadas de outras funções.
+
+```javascript
+
+function executar(funcao) {
+    funcao();
+}
+
+executar(() => console.log("Função executada!")); // Saída: Função executada!
+
+```
+
+### Funções Recursivas
+
+Uma função pode chamar a si mesma. Isso é conhecido como recursão.
+
+```javascript
+
+function fatorial(n) {
+    if (n === 0) {
+        return 1;
+    }
+    return n * fatorial(n - 1);
+}
+
+console.log(fatorial(5)); // Saída: 120
+
+```
+
+---
+
 ## Promise
 
 
