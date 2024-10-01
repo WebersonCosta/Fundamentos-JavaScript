@@ -123,8 +123,6 @@ JSON é um formato baseado em pares de chave-valor. Por exemplo:
 
 #### Minhas anotações
 
----
-
 ## Função
 
 Uma função é um bloco de código projetado para executar uma tarefa específica. Você pode chamar uma função sempre que precisar executar essa tarefa.
