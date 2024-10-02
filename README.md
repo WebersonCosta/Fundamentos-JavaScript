@@ -4,9 +4,11 @@
 
 ## Template String
 
+
 Template strings são definidas usando crases **(`)** em vez de aspas simples **(')** ou duplas **(")**.
 
 ### Interpolação de Variáveis
+
 
 ```javacript
   const nome = "João";
@@ -18,6 +20,7 @@ Template strings são definidas usando crases **(`)** em vez de aspas simples **
 ---
 
 ## Operador Ternário
+
 
 O operador ternário em JavaScript é uma forma concisa de fazer uma verificação condicional. Ele funciona como um atalho para a estrutura if...else
 
@@ -49,6 +52,7 @@ O operador ternário em JavaScript é uma forma concisa de fazer uma verificaç�
 ---
 
 ## Math
+
 
 O objeto Math em JavaScript é uma coleção de propriedades e métodos matemáticos que você pode usar para realizar cálculos. Aqui estão alguns dos principais recursos do objeto Math e como usá-los:
 
@@ -124,6 +128,7 @@ JSON é um formato baseado em pares de chave-valor. Por exemplo:
 #### Minhas anotações
 
 ## Função
+
 
 Uma função é um bloco de código projetado para executar uma tarefa específica. Você pode chamar uma função sempre que precisar executar essa tarefa.
 
@@ -223,6 +228,17 @@ function fatorial(n) {
 console.log(fatorial(5)); // Saída: 120
 
 ```
+
+---
+
+# Orientação a Objeto-JavaScript
+
+#### Minhas anotações
+
+## Objeto
+
+
+Um objeto é uma coleção de propriedades, onde cada propriedade é uma associação entre uma chave (ou nome) e um valor. Os valores podem ser de qualquer tipo, incluindo outros objetos, funções (que são chamadas de métodos quando associadas a um objeto) e tipos primitivos.
 
 ---
 
