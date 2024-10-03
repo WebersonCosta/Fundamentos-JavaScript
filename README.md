@@ -108,6 +108,67 @@ O objeto Math em JavaScript é uma coleção de propriedades e métodos matemát
 
 ---
 
+## Operador spread
+
+O **spread operator** (operador de espalhamento) em JavaScript é representado por três pontos (...) e é usado para expandir ou "espalhar" elementos de um array ou propriedades de um objeto em um novo contexto. Ele é bastante útil para copiar arrays ou objetos, combinar dados e passar argumentos em funções
+
+#### Exemplos de Uso
+
+- Espalhando Elementos de um Array
+Você pode usar o spread operator para criar uma cópia de um array ou para combinar arrays:
+```javascript
+
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+
+// Copiando um array
+const arrayCopy = [...array1];
+console.log(arrayCopy); // [1, 2, 3]
+
+// Combinando arrays
+const combinedArray = [...array1, ...array2];
+console.log(combinedArray); // [1, 2, 3, 4, 5, 6]
+
+```
+
+- Espalhando Propriedades de um Objeto
+O spread operator também pode ser usado com objetos para copiar ou combinar propriedades:
+
+```javascript
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+
+// Copiando um objeto
+const objCopy = { ...obj1 };
+console.log(objCopy); // { a: 1, b: 2 }
+
+// Combinando objetos
+const combinedObj = { ...obj1, ...obj2 };
+console.log(combinedObj); // { a: 1, b: 3, c: 4 }
+
+```
+
+Note que, ao combinar objetos, se houver propriedades com o mesmo nome, a última sobrescreverá as anteriores.
+
+- Passando Argumentos para Funções
+O spread operator pode ser utilizado para passar elementos de um array como argumentos para uma função:
+
+```javascript
+
+const numbers = [1, 2, 3];
+
+function sum(a, b, c) {
+  return a + b + c;
+}
+
+// Usando o spread operator
+const result = sum(...numbers);
+console.log(result); // 6
+
+```
+
+---
+
 ## JSON
 
 
