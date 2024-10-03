@@ -335,6 +335,58 @@ console.log(entradas);
 
 ```
 
+### Object.defineProperty(obj, prop, descriptor)
+
+A função **Object.defineProperty(obj, prop, descriptor)** é um método em JavaScript que permite definir uma nova propriedade em um objeto ou modificar uma propriedade existente, configurando atributos específicos dessa propriedade através de um objeto de descritor.
+
+#### Sintaxe
+
+```javascript
+
+Object.defineProperty(obj, prop, descriptor)
+
+```
+
+- obj: O objeto no qual a propriedade será definida ou modificada.
+- prop: O nome da propriedade a ser definida ou modificada.
+- descriptor: Um objeto que descreve a propriedade e pode conter os seguintes atributos:
+
+
+
+#### Atributos do Descritor
+
+1. value: O valor da propriedade.
+2. writable: Um booleano que indica se a propriedade pode ser modificada. O padrão é false.
+3. enumerable: Um booleano que indica se a propriedade aparece durante a iteração sobre as propriedades do objeto. O padrão é false.
+4. configurable: Um booleano que indica se a propriedade pode ser deletada ou se suas características (como writable e enumerable) podem ser alteradas. O padrão é false.
+
+#### Exemplo
+
+```javascript
+
+const pessoa = {};
+
+Object.defineProperty(pessoa, 'nome', {
+    value: 'João',
+    writable: false,   // Não pode ser modificado
+    enumerable: true,  // Pode ser enumerado
+    configurable: true // Pode ser configurado
+});
+
+console.log(pessoa.nome); // 'João'
+
+pessoa.nome = 'Maria'; // Não faz nada, pois writable é false
+console.log(pessoa.nome); // 'João'
+
+for (let chave in pessoa) {
+    console.log(chave); // 'nome'
+}
+
+delete pessoa.nome; // Pode ser deletado, pois configurable é true
+console.log(pessoa.nome); // undefined
+
+```
+
 ### Object.assign(target, ...sources)
 
 O **Object.assign** é um método que é usado para copiar as propriedades de um ou mais objetos para um objeto de destino. Ele é muito útil para a criação de novos objetos a partir de objetos existentes, facilitando a combinação de propriedades e a criação de cópias de objetos.
