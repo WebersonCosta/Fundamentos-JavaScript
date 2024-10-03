@@ -242,10 +242,100 @@ Um objeto é uma coleção de propriedades, onde cada propriedade é uma associa
 
 ### Funções importantes da classe ***Object***
 
-- **Object.keys(obj)**
-- **Object.values(obj)**
-- **Object.entries(obj)**
-- **Object.assign(target, ...sources)**
+### Object.keys(obj)
+
+A função **Object.keys(obj)** é um método em JavaScript que retorna um array contendo as chaves (propriedades enumeráveis) de um objeto
+
+#### Sintaxe
+
+```javascript
+
+Object.keys(obj)
+
+```
+
+#### Retorno
+
+Retorna um array contendo as chaves enumeráveis do objeto. Se o objeto não tiver propriedades enumeráveis, retorna um array vazio.
+
+#### Exemplo
+
+```javascript
+const pessoa = {
+    nome: 'João',
+    idade: 30,
+    cidade: 'São Paulo'
+};
+
+const chaves = Object.keys(pessoa);
+console.log(chaves); // ['nome', 'idade', 'cidade']
+
+```
+
+### Object.values(obj)
+
+A função **Object.values(obj)** é um método em JavaScript que retorna um array contendo os valores das propriedades enumeráveis de um objeto.
+
+#### Sintaxe
+
+```javascript
+
+Object.values(obj)
+
+```
+
+#### Retorno
+
+Retorna um array com os valores das propriedades enumeráveis do objeto. Se o objeto não tiver propriedades enumeráveis, retorna um array vazio.
+
+#### Exemplo
+
+```javascript
+
+const pessoa = {
+    nome: 'João',
+    idade: 30,
+    cidade: 'São Paulo'
+};
+
+const valores = Object.values(pessoa);
+console.log(valores); // ['João', 30, 'São Paulo']
+
+```
+
+### Object.entries(obj)
+
+A função **Object.entries(obj)** é um método em JavaScript que retorna um array de arrays, onde cada sub-array contém um par chave-valor de um objeto.
+
+#### Sintaxe
+
+```javascript
+
+Object.entries(obj)
+
+```
+
+#### Retorno
+
+Retorna um array de arrays, onde cada sub-array contém dois elementos: a chave e o valor correspondente. Se o objeto não tiver propriedades enumeráveis, retorna um array vazio.
+
+#### Exemplo
+
+```javascript
+
+const pessoa = {
+    nome: 'João',
+    idade: 30,
+    cidade: 'São Paulo'
+};
+
+const entradas = Object.entries(pessoa);
+console.log(entradas); 
+// [['nome', 'João'], ['idade', 30], ['cidade', 'São Paulo']]
+
+```
+
+### Object.assign(target, ...sources)
 
 O **Object.assign** é um método que é usado para copiar as propriedades de um ou mais objetos para um objeto de destino. Ele é muito útil para a criação de novos objetos a partir de objetos existentes, facilitando a combinação de propriedades e a criação de cópias de objetos.
 
@@ -257,10 +347,10 @@ Object.assign(destino, ...fontes);
 
 ```
 
-- destino: O objeto que receberá as propriedades.
-- ...fontes: Um ou mais objetos cujas propriedades serão copiadas para o objeto de destino.
+1. destino: O objeto que receberá as propriedades.
+2. ...fontes: Um ou mais objetos cujas propriedades serão copiadas para o objeto de destino.
 
-#### Exemplo de uso
+#### Exemplo
 
 ```javascript
 const obj1 = { a: 1, b: 2 };
@@ -271,12 +361,140 @@ console.log(resultado); // { a: 1, b: 3, c: 4 }
 
 ```
 
-- **Object.freeze(obj)**
-- **Object.seal(obj)**
-- **Object.getOwnPropertyNames(obj)**
-- **Object.getPrototypeOf(obj)**
-- **Object.getPrototypeOf(obj)**
+### Object.freeze(obj)
 
+A função **Object.freeze(obj)** é um método em JavaScript que congela um objeto, tornando-o imutável. Isso significa que você não pode adicionar, remover ou modificar suas propriedades depois que o objeto foi congelado.
+
+#### Sintaxe
+
+```javascript
+
+Object.freeze(obj)
+
+```
+#### Comportamento
+
+  1. **Imutabilidade:** Depois de congelado, um objeto não pode ter novas propriedades adicionadas, propriedades existentes não podem ser removidas ou modificadas (mesmo que suas propriedades sejam objetos).
+  2. **Propriedades Não Enumeráveis:** O método não afeta as propriedades não enumeráveis de um objeto. Se o objeto já tiver propriedades não enumeráveis, elas permanecerão inalteradas.
+  3. **Níveis de Congelamento:** Apenas o objeto em si é congelado. Se ele contém objetos aninhados, essas propriedades aninhadas ainda podem ser alteradas a menos que também sejam congeladas.
+
+#### Exemplo
+
+```javascript
+
+const pessoa = {
+    nome: 'João',
+    idade: 30
+};
+
+Object.freeze(pessoa);
+
+pessoa.idade = 31; // Não fará nada
+pessoa.cidade = 'São Paulo'; // Não fará nada
+delete pessoa.nome; // Não fará nada
+
+console.log(pessoa); // { nome: 'João', idade: 30 }
+
+```
+
+### Object.seal(obj)
+
+A **função Object.seal(obj)** é um método em JavaScript que "sele" um objeto, permitindo que suas propriedades existentes sejam modificadas, mas impedindo que novas propriedades sejam adicionadas ou que propriedades existentes sejam removidas. 
+
+#### Sintaxe
+
+```javascript
+
+Object.seal(obj)
+
+```
+
+#### Comportamento
+
+1. **Imutabilidade Estrutural:** Depois que um objeto é selado, você não pode adicionar novas propriedades ou remover as existentes. No entanto, você ainda pode modificar os valores das propriedades existentes, desde que elas sejam enumeráveis
+2. **Propriedades Não Enumeráveis:** O método não afeta as propriedades não enumeráveis de um objeto. Se o objeto já tiver propriedades não enumeráveis, elas permanecerão inalteradas.
+3. **Propriedades Existentes:** Você pode modificar as propriedades existentes, mesmo que estejam seladas.
+
+#### Exemplo
+
+```javascript
+
+const pessoa = {
+    nome: 'João',
+    idade: 30
+};
+
+Object.seal(pessoa);
+
+pessoa.idade = 31; // Permite a modificação
+pessoa.cidade = 'São Paulo'; // Não permite a adição
+delete pessoa.nome; // Não permite a remoção
+
+console.log(pessoa); // { nome: 'João', idade: 31 }
+
+```
+
+### Object.getOwnPropertyNames(obj)
+
+A **função Object.getOwnPropertyNames(obj)** é um método em JavaScript que retorna um array contendo os nomes (chaves) de todas as propriedades de um objeto, tanto as enumeráveis quanto as não enumeráveis. 
+
+```javascript
+
+Object.getOwnPropertyNames(obj)
+
+```
+
+#### Retorno
+
+Retorna um array com os nomes de todas as propriedades do objeto. Se o objeto não tiver propriedades, retorna um array vazio.
+
+#### Exemplo
+
+```javascript
+
+const pessoa = {
+    nome: 'João',
+    idade: 30
+};
+
+Object.defineProperty(pessoa, 'cpf', {
+    value: '123.456.789-00',
+    enumerable: false // Não enumerável
+});
+
+const propriedades = Object.getOwnPropertyNames(pessoa);
+console.log(propriedades); // ['nome', 'idade', 'cpf']
+
+```
+  
+### Object.getPrototypeOf(obj)
+
+A função Object.getPrototypeOf(obj) é um método em JavaScript que retorna o protótipo do objeto especificado. O protótipo é o objeto a partir do qual o objeto dado herda suas propriedades e métodos.
+
+#### Sintaxe
+
+```javascript
+
+Object.getPrototypeOf(obj)
+
+```
+#### Retorno
+
+Retorna o protótipo do objeto especificado. Se o objeto não tiver um protótipo (como um objeto criado com Object.create(null)), o método retornará null.
+
+#### Exemplo
+
+```javascript
+
+const pessoa = {
+    nome: 'João',
+    idade: 30
+};
+
+const prototipo = Object.getPrototypeOf(pessoa);
+console.log(prototipo); // { ... } (prototipo padrão do objeto)
+
+```
 
 ---
 
