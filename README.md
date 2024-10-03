@@ -242,17 +242,6 @@ Um objeto é uma coleção de propriedades, onde cada propriedade é uma associa
 
 ---
 
-## Promise
-
-
-Uma promessa é um objeto que representa a eventual conclusão ou falha de uma operação assíncrona e seu valor resultante. Ela pode estar em um dos seguintes estados:
-
-- **Pendente (Pending)**: Estado inicial, quando a operação ainda não foi concluída.
-- **Cumprida (Fulfilled)**: A operação foi concluída com sucesso.
-- **Rejeitada (Rejected)**: A operação falhou.
-
----
-
 ## Object.assign
 
 
@@ -279,6 +268,17 @@ const resultado = Object.assign({}, obj1, obj2);
 console.log(resultado); // { a: 1, b: 3, c: 4 }
 
 ```
+
+---
+
+## Promise
+
+
+Uma promessa é um objeto que representa a eventual conclusão ou falha de uma operação assíncrona e seu valor resultante. Ela pode estar em um dos seguintes estados:
+
+- **Pendente (Pending)**: Estado inicial, quando a operação ainda não foi concluída.
+- **Cumprida (Fulfilled)**: A operação foi concluída com sucesso.
+- **Rejeitada (Rejected)**: A operação falhou.
 
 ---
 
