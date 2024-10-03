@@ -240,10 +240,12 @@ console.log(fatorial(5)); // Saída: 120
 
 Um objeto é uma coleção de propriedades, onde cada propriedade é uma associação entre uma chave (ou nome) e um valor. Os valores podem ser de qualquer tipo, incluindo outros objetos, funções (que são chamadas de métodos quando associadas a um objeto) e tipos primitivos.
 
----
+### Funções importantes da classe ***Object***
 
-## Object.assign
-
+- **Object.keys(obj)**
+- **Object.values(obj)**
+- **Object.entries(obj)**
+- **Object.assign(target, ...sources)**
 
 O **Object.assign** é um método que é usado para copiar as propriedades de um ou mais objetos para um objeto de destino. Ele é muito útil para a criação de novos objetos a partir de objetos existentes, facilitando a combinação de propriedades e a criação de cópias de objetos.
 
@@ -268,6 +270,13 @@ const resultado = Object.assign({}, obj1, obj2);
 console.log(resultado); // { a: 1, b: 3, c: 4 }
 
 ```
+
+- **Object.freeze(obj)**
+- **Object.seal(obj)**
+- **Object.getOwnPropertyNames(obj)**
+- **Object.getPrototypeOf(obj)**
+- **Object.getPrototypeOf(obj)**
+
 
 ---
 
