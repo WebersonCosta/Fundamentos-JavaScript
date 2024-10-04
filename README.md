@@ -775,7 +775,7 @@ arr.splice(1, 2, 5); // arr é [1, 5, 4]
 
 ```
 
-#### OUtros
+#### Outros
 
 - **concat():** Usado para unir dois ou mais arrays. Este método não altera os arrays existentes, mas retorna um novo array.
 
