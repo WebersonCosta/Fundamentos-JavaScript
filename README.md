@@ -611,6 +611,69 @@ console.log(prototipo); // { ... } (prototipo padrão do objeto)
 
 ---
 
+# Array-JavaScript
+
+#### Minhas anotações
+
+## Conceito
+
+Um array é uma estrutura de dados que permite armazenar múltiplos valores em uma única variável. Os elementos de um array podem ser de diferentes tipos, como números, strings, objetos e até outros arrays.
+
+### Como criar um array
+
+- Usando colchetes[]:
+
+```javascript
+
+const frutas = ['maçã', 'banana', 'laranja'];
+
+```
+
+- Usando o construtor Array:
+
+```javascript
+
+const numeros = new Array(1, 2, 3, 4, 5);
+
+```
+
+## Métodos importantes para manipular e interagir com um array
+
+#### Métodos de Manipulação de Arrays
+
+- **push():** Adiciona um ou mais elementos ao final de um array e retorna o novo comprimento do array.
+- **pop():** Remove o último elemento de um array e o retorna. Esse método altera o comprimento do array.
+- **shift():** Remove o primeiro elemento de um array e o retorna, alterando o comprimento do array.
+- **unshift():** Adiciona um ou mais elementos ao início de um array e retorna o novo comprimento do array.
+
+#### Métodos de Iteração
+
+- **forEach():** Executa uma função fornecida uma vez para cada elemento do array.
+- **map():** Cria um novo array com os resultados da chamada de uma função para cada elemento do array.
+- **filter():** Cria um novo array com todos os elementos que passam no teste implementado pela função fornecida.
+- **reduce():** Executa uma função redutora em cada elemento do array, resultando em um único valor.
+
+#### Métodos de Busca e Localização
+
+- **find():** Retorna o valor do primeiro elemento do array que satisfaz a função de teste fornecida.
+- **indexOf():** Retorna o primeiro índice em que um determinado elemento pode ser encontrado no array, ou -1 se não estiver presente.
+
+#### Métodos de Ordenação e Modificação
+
+- **sort():** Ordena os elementos do array in-place e retorna o array. O método pode tomar uma função de comparação como argumento.
+- **reverse():** Inverte a ordem dos elementos do array.
+
+#### Métodos de Criação de Novos Arrays
+  
+- **slice():** Retorna uma cópia rasa de uma parte do array em um novo array.
+- **splice():** Altera o conteúdo de um array removendo ou substituindo elementos existentes e/ou adicionando novos elementos.
+
+#### OUtros
+
+- **concat():** Usado para unir dois ou mais arrays. Este método não altera os arrays existentes, mas retorna um novo array.
+
+---
+
 ## Promise
 
 
