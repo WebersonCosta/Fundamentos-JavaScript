@@ -642,35 +642,150 @@ const numeros = new Array(1, 2, 3, 4, 5);
 #### Métodos de Manipulação de Arrays
 
 - **push():** Adiciona um ou mais elementos ao final de um array e retorna o novo comprimento do array.
+
+```javacript
+
+const arr = [1, 2, 3];
+arr.push(4); // arr é [1, 2, 3, 4]
+
+```
+
 - **pop():** Remove o último elemento de um array e o retorna. Esse método altera o comprimento do array.
+
+```javacript
+
+const arr = [1, 2, 3];
+arr.pop(); // arr é [1, 2]
+
+```
+
 - **shift():** Remove o primeiro elemento de um array e o retorna, alterando o comprimento do array.
+
+```javacript
+
+const arr = [1, 2, 3];
+arr.shift(); // arr é [2, 3]
+
+```
+
 - **unshift():** Adiciona um ou mais elementos ao início de um array e retorna o novo comprimento do array.
+
+```javacript
+
+const arr = [1, 2, 3];
+arr.unshift(0); // arr é [0, 1, 2, 3]
+
+```
 
 #### Métodos de Iteração
 
 - **forEach():** Executa uma função fornecida uma vez para cada elemento do array.
+
+```javacript
+
+const arr = [1, 2, 3];
+arr.forEach(num => console.log(num));
+
+```
+
 - **map():** Cria um novo array com os resultados da chamada de uma função para cada elemento do array.
+
+```javacript
+
+const arr = [1, 2, 3];
+const doubled = arr.map(num => num * 2); // [2, 4, 6]
+
+```
+
 - **filter():** Cria um novo array com todos os elementos que passam no teste implementado pela função fornecida.
+
+```javacript
+
+const arr = [1, 2, 3, 4];
+const evens = arr.filter(num => num % 2 === 0); // [2, 4]
+
+```
+
 - **reduce():** Executa uma função redutora em cada elemento do array, resultando em um único valor.
+
+```javacript
+
+const arr = [1, 2, 3];
+const sum = arr.reduce((acc, curr) => acc + curr, 0); // 6
+
+```
 
 #### Métodos de Busca e Localização
 
 - **find():** Retorna o valor do primeiro elemento do array que satisfaz a função de teste fornecida.
+
+```javacript
+
+const arr = [1, 2, 3, 4];
+const found = arr.find(num => num > 2); // 3
+
+```
+
 - **indexOf():** Retorna o primeiro índice em que um determinado elemento pode ser encontrado no array, ou -1 se não estiver presente.
+
+```javacript
+
+const arr = [1, 2, 3];
+const index = arr.indexOf(2); // 1
+
+```
 
 #### Métodos de Ordenação e Modificação
 
 - **sort():** Ordena os elementos do array in-place e retorna o array. O método pode tomar uma função de comparação como argumento.
+
+```javacript
+
+const arr = [3, 1, 2];
+arr.sort(); // [1, 2, 3]
+
+```
+
 - **reverse():** Inverte a ordem dos elementos do array.
+
+```javacript
+
+const arr = [1, 2, 3];
+arr.reverse(); // [3, 2, 1]
+
+```
 
 #### Métodos de Criação de Novos Arrays
   
 - **slice():** Retorna uma cópia rasa de uma parte do array em um novo array.
+
+```javacript
+
+const arr = [1, 2, 3, 4];
+const sliced = arr.slice(1, 3); // [2, 3]
+
+```
+
 - **splice():** Altera o conteúdo de um array removendo ou substituindo elementos existentes e/ou adicionando novos elementos.
+
+```javacript
+
+const arr = [1, 2, 3, 4];
+arr.splice(1, 2, 5); // arr é [1, 5, 4]
+
+```
 
 #### OUtros
 
 - **concat():** Usado para unir dois ou mais arrays. Este método não altera os arrays existentes, mas retorna um novo array.
+
+```javacript
+
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+const combined = arr1.concat(arr2); // [1, 2, 3, 4]
+
+```
 
 ---
 
