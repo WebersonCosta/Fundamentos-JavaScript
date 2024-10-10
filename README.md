@@ -108,6 +108,83 @@ O objeto Math em JavaScript é uma coleção de propriedades e métodos matemát
 
 ---
 
+## Destructuring
+
+O destructuring (ou destruturação) é um recurso do JavaScript que permite extrair valores de arrays ou propriedades de objetos em variáveis distintas de forma mais concisa e legível.
+
+#### Conceito
+
+A destruturação facilita a extração de dados, reduzindo a quantidade de código necessária para acessar elementos de arrays ou propriedades de objetos. Em vez de acessar cada item ou propriedade individualmente, você pode fazer isso em uma única linha, o que torna o código mais claro e direto.
+
+```javascript
+
+const pessoa = {
+  nome: 'Alice',
+  idade: 25,
+  cidade: 'São Paulo'
+};
+
+// Sem destructuring
+const nome = pessoa.nome;
+const idade = pessoa.idade;
+
+// Com destructuring
+const { nome, idade } = pessoa;
+
+console.log(nome); // 'Alice'
+console.log(idade); // 25
+
+```
+
+Você também pode renomear as variáveis ao fazer a destruturação:
+
+```javascript
+
+const { nome: nomeCompleto, idade: anos } = pessoa;
+
+console.log(nomeCompleto); // 'Alice'
+console.log(anos); // 25
+
+```
+#### Destructuring de Arrays
+
+A destruturação de arrays é semelhante. Você pode extrair elementos do array em variáveis separadas:
+
+```javascript
+
+const numeros = [1, 2, 3];
+
+// Sem destructuring
+const primeiro = numeros[0];
+const segundo = numeros[1];
+
+// Com destructuring
+const [primeiro, segundo] = numeros;
+
+console.log(primeiro); // 1
+console.log(segundo); // 2
+
+```
+
+Você também pode ignorar elementos durante a destruturação:
+
+```javascript
+
+const [um, , tres] = numeros;
+
+console.log(um); // 1
+console.log(tres); // 3
+
+```
+
+#### Vantagens do Destructuring
+
+1. **Legibilidade:** O código se torna mais fácil de ler e entender.
+2. **Menos código:** Você escreve menos código para obter os mesmos resultados.
+3. **Flexibilidade:** Permite que você renomeie variáveis facilmente.
+
+---
+
 ## Operador spread
 
 O **spread operator** (operador de espalhamento) em JavaScript é representado por três pontos (...) e é usado para expandir ou "espalhar" elementos de um array ou propriedades de um objeto em um novo contexto. Ele é bastante útil para copiar arrays ou objetos, combinar dados e passar argumentos em funções
