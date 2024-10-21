@@ -367,6 +367,215 @@ console.log(fatorial(5)); // Saída: 120
 
 ```
 
+#### Métodos nativos úteis para se trabalhar com funções.
+
+- **call()**
+  
+Invoca uma função com um valor específico para this e argumentos passados individualmente.
+
+```javascript
+
+function greet() {
+  console.log(`Olá, ${this.name}`);
+}
+
+const person = { name: 'Maria' };
+greet.call(person); // Olá, Maria
+
+```
+
+- **apply()**
+  
+Funciona de maneira semelhante ao call(), mas aceita um array de argumentos em vez de argumentos individuais.
+
+```javascript
+
+function sum(a, b) {
+  return a + b;
+}
+
+const numbers = [3, 5];
+console.log(sum.apply(null, numbers)); // 8
+
+```
+- **bind()**
+
+Cria uma nova função que, quando chamada, tem o valor de this definido para o primeiro argumento passado e os demais argumentos pré-definidos.
+
+```javascript
+
+const person = { name: 'Lucas' };
+
+function greet() {
+  console.log(`Olá, ${this.name}`);
+}
+
+const greetLucas = greet.bind(person);
+greetLucas(); // Olá, Lucas
+
+```
+
+- **arrow functions**
+
+Uma sintaxe mais concisa para declarar funções. Elas têm um comportamento léxico para this, ou seja, this refere-se ao contexto de onde a função foi criada.
+
+```javascript
+
+const soma = (a, b) => a + b;
+console.log(soma(2, 3)); // 5
+
+```
+
+- **setTimeout()**
+
+Executa uma função após um intervalo de tempo especificado.
+
+```javascript
+
+setTimeout(() => {
+  console.log('Isso será executado após 2 segundos');
+}, 2000);
+
+```
+
+- **setInterval()**
+
+Executa uma função repetidamente a cada intervalo de tempo especificado.
+
+```javascript
+
+setInterval(() => {
+  console.log('Isso será executado a cada 2 segundos');
+}, 2000);
+
+```
+
+- **clearTimeout()**
+
+Cancela uma função agendada via setTimeout().
+
+```javascript
+
+const timer = setTimeout(() => console.log('Isso não será mostrado'), 2000);
+clearTimeout(timer);
+
+```
+
+- **clearInterval()**
+
+Cancela uma função repetitiva agendada via setInterval().
+
+```javascript
+
+const intervalId = setInterval(() => console.log('Repetindo'), 1000);
+clearInterval(intervalId); // Interrompe o intervalo
+
+```
+
+- **Function.prototype.toString()**
+
+Retorna o código fonte de uma função em formato de string.
+
+```javascript
+
+function exemplo() {
+  return 'Exemplo';
+}
+
+console.log(exemplo.toString());
+
+```
+
+- **Function.prototype.length**
+
+Retorna o número de parâmetros declarados na função.
+
+```javascript
+
+function soma(a, b) {}
+console.log(soma.length); // 2
+
+```
+
+- **Function.prototype.name**
+  
+Retorna o nome da função (útil para depuração).
+
+```javascript
+
+function exemplo() {}
+console.log(exemplo.name); // exemplo
+
+```
+
+- **arguments**
+
+Um objeto semelhante a um array que contém os argumentos passados para a função. Disponível em funções tradicionais, mas não em arrow functions.
+
+```javascript
+
+function sum() {
+  let total = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    total += arguments[i];
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3, 4)); // 10
+
+```
+
+- **Function constructor**
+  
+Permite criar uma função dinamicamente a partir de uma string. Porém, seu uso não é recomendado por questões de segurança e desempenho.
+
+```javascript
+
+const soma = new Function('a', 'b', 'return a + b');
+console.log(soma(2, 3)); // 5
+
+```
+
+- **typeof**
+
+Operador que retorna o tipo de uma função.
+
+```javascript
+
+function exemplo() {}
+console.log(typeof exemplo); // "function"
+
+```
+
+- **instanceof**
+
+Verifica se uma função foi criada a partir de uma determinada classe ou construtor.
+
+```javascript
+
+function MinhaFuncao() {}
+
+const obj = new MinhaFuncao();
+console.log(obj instanceof MinhaFuncao); // true
+
+```
+
+- **includes()**
+
+Verifica se um array ou uma string contém um determinado valor. Ele retorna true se o valor for encontrado e false caso contrário.
+
+```javascript
+
+const frutas = ['maçã', 'banana', 'laranja'];
+
+console.log(frutas.includes('banana')); // true
+console.log(frutas.includes('uva'));    // false
+
+```
+
+Esses métodos fornecem uma base sólida para trabalhar com funções em JavaScript, desde a manipulação básica até técnicas mais avançadas, como controle de contexto e agendamento de execução.
+
 ---
 
 # Orientação a Objeto-JavaScript
